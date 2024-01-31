@@ -36,3 +36,28 @@ Consider the **searching problem**:
  ```
 ### 1.1-4
 Consider the problem of adding two n-bit binary integers, stored in two n-element arrays A and B. The sum of the two integers should be stored in binary form in an (n + 1)-element array C. State the problem formally and write pseudocode for adding the two integers.
+
+That seems like an adequately formal statement of the problem. The solution is to iterate over the binary arrays A and B from least to greatest place and adjust bits in the current and next place in array C appropriately. Importantly, this involves calculating an intermediate value for the next place in array C when two bits have a value of 1 to account for base 2 carry during addition and account for a potential 1 value already in the C array from previous bit additions.
+```
+BINARY-ADDITION(A, B)
+ C <- arrayOfLength[length[A]]
+ for i <- 1 to length[A]
+  if A[i] = 0 and B[i] = 0
+   C[i] <- ADD-BINARY-DIGITS(C[i], 0)
+  else if A[i] = 0 and B[i] = 1
+   if C[i] = 1
+    C[i + 1] <- ADD-BINARY-DIGITS( C[i + 1], 1)
+   C[i] <- ADD-BINARY-DIGITS(C[i], 1)
+  else if A[i] = 1 and B[i] = 1
+   C[i + 1] <- ADD-BINARY-DIGITS( C[i + 1], 1)
+   C[i] <- 0
+ return C
+
+ADD-BINARY-DIGITS(v1, v2)
+ if v1 = 0 and v2 = 0
+  return 0
+ else if v1 = 1 and v2 = 1
+  return 0
+ else
+  return 1
+```
