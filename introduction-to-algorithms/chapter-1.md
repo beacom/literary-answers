@@ -9,5 +9,7 @@ Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of non
 `INSERTION-SORT`(A)
 
 for j &larr; 2 **to** length[A]
+
   **do** _key_ &larr; A[j]
+  
     &#9654; Insert A[j] into the sorted sequence A[1..j-1].
