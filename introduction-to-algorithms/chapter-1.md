@@ -6,7 +6,7 @@ Using figure 1.2 as a model, illustrate the operation of `INSERTION-SORT` on the
 ### 1.1-2 
 Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of nondecreasing order.
 
-This is a matter of changing the logic from greater than to less than.
+This is largely a matter of changing the logic from greater than to less than.
 
 ```
 INSERTION-SORT(A)
@@ -19,3 +19,6 @@ INSERTION-SORT(A)
       i <- i - 1
     A[i + 1] <- key
 ```
+# 1.1-3
+Consider the **searching problem**:
+ **Input:** A sequence of n numbers A = (a<sub>1</sub>, a<sub>2</sub>,....a<sub>n</sub>) and a value _v_.
