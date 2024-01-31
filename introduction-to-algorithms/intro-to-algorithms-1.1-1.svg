@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.2958"
-     inkscape:cx="231.13134"
-     inkscape:cy="243.09307"
+     inkscape:cx="274.34789"
+     inkscape:cy="261.61445"
      inkscape:window-width="1712"
      inkscape:window-height="1051"
      inkscape:window-x="0"
@@ -36,7 +36,7 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      inkscape:export-bgcolor="#ffffffff"
-     inkscape:clip-to-page="false" />
+     inkscape:clip-to-page="true" />
   <defs
      id="defs1">
     <marker
@@ -64,6 +64,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-43.308675,-7.6623738)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1.065"
+       id="rect1"
+       width="142.52135"
+       height="112.50611"
+       x="32.486855"
+       y="3.3744819" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
