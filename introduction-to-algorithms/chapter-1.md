@@ -6,5 +6,5 @@ Using figure 1.2 as a model, illustrate the operation of `INSERTION-SORT` on the
 ### 1.1-2
 Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of nondecreasing order.
 ```
-&larr;
+`&larr;`
 ```
