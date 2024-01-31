@@ -6,9 +6,9 @@ Using figure 1.2 as a model, illustrate the operation of `INSERTION-SORT` on the
 ### 1.1-2
 Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of nondecreasing order.
 
-````
+```
 `INSERTION-SORT`(A)
  for j &larr; 2 **to** length[A]
   **do** _key_ &larr; A[j]
     Insert A[j] into the sorted sequence A[1..j-1].
-````
+```
