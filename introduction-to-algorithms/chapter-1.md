@@ -87,5 +87,5 @@ Consider linear search again (see exercise 1.1-3). How many elements of the inpu
 Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) of _n_ numbers contains repeated occurrences of some number. Show that this can be done in Θ(_n_ lg _n_) time, wher lg _n_ stands for log<sub>2</sub> _n_.
 
 ### 1.2-4
-Consider the problem of evaluating a polynomial at a point. Given n coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $\displaystyle\sum_{i=0}^{n-1} a_i x_i $. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called Horner's rule) for rewriting the polynomial:
-$\displaystyle\sum_{i=0}^{n-1} a_i x_i $ = (...(a<sub>n-1</sub>x + a<sub>n-2</sub>)x + ... + a<sub>1</sub>)x + a<sub>0</sub>.
+Consider the problem of evaluating a polynomial at a point. Given n coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x_i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called Horner's rule) for rewriting the polynomial:
+$`\displaystyle\sum_{i=0}^{n-1} a_i x_i `$ = (...(a<sub>n-1</sub>x + a<sub>n-2</sub>)x + ... + a<sub>1</sub>)x + a<sub>0</sub>.
