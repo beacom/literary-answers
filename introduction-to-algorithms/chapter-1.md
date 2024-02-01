@@ -89,3 +89,9 @@ Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>
 ### 1.2-4
 Consider the problem of evaluating a polynomial at a point. Given n coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x_i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called Horner's rule) for rewriting the polynomial:
 $`\displaystyle\sum_{i=0}^{n-1} a_i x_i `$ = (...(a<sub>n-1</sub>x + a<sub>n-2</sub>)x + ... + a<sub>1</sub>)x + a<sub>0</sub>.
+
+### 1.2-5
+Express the function n<sup>3</sup>/1000 - 100n<sup>2</sup> - 100n + 3 in terms of Θ-notation.
+
+### 1.2-6
+How can we modify almost any algorithm to have a good best-case running time?
