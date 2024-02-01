@@ -6,7 +6,7 @@ Using figure 1.2 as a model, illustrate the operation of `INSERTION-SORT` on the
 ### 1.1-2 
 Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of nondecreasing order.
 
-This is largely a matter of changing the logic from greater than to less than.
+This is a matter of changing the comparison logic from greater than to less than.
 
 ```
 INSERTION-SORT(A)
@@ -25,7 +25,7 @@ Consider the **searching problem**:
  **Output:** An index i such that _v_ = A[i] or tthe special value `NIL` if _v_ does not appear in A.
  Write pseudocode for **linear search**, which scans through the sequence, looking for _v_.
 
- This is a matter of iterating over the sequence and performing an equals comprison operation.
+ This is a matter of iterating over the sequence and performing an equals comprison operation and returning NIL if no value was found.
 
  ```
  LINEAR-SEARCH(A, v)
@@ -60,4 +60,23 @@ ADD-BINARY-DIGITS(v1, v2)
   return 0
  else
   return 1
+```
+### 1.2-1
+Consider sorting _n_ numbers stored in array A by first finding the smallest element of A and putting it in the first entry of another array B. Then find the second smallest element of A and put it in the second entry of B. Continue in this manner for the _n_ elements of A. Write pseduocode for the algorithm, which is known as selection sort. Give the best-case and worst-case running times of selection sort in Θ-notation.
+
+The pseudocode below loops over array B and for each element in B loops over A to find the lowest remaining value in A. The values in A are replaced by NIL as they are copied to B. The worst case running time is Θ(n<sup>2</sup>).
+
+```
+SELECTION-SORT(A)
+ B <- arrayOfLength[length[A]]
+ for j <- 1 to length[B]
+  for i <- 1 to length[A]
+   if currentValue = NIL and A[i] != NIL
+    currentValue <- A[i]
+    currentIndex <- i
+   else if currentValue > A[i]
+    currentValue <- A[i]
+    currentIndex <- i
+  B[j] <- currentValue;
+  A[currentIndex] <- NIL
 ```
