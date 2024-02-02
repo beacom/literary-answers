@@ -94,11 +94,19 @@ Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>
 A repeated occurance is finding the same value more than once. So starting with the first element, search through the rest of the sequence looking for that value. Repeat on the second element, but it is not necessary to compare to the previous element because those two elements have already been compared. So as we continue through the sequence there are fewer elements to compare to each time. The value log<sub>2</sub> _n_ represents the decreasing number of comparisons necessary in addition to each element of the sequence, hence Θ(_n_ lg _n_). 
 
 ### 1.2-4
-Consider the problem of evaluating a polynomial at a point. Given n coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x^i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called [Horner's rule](https://infogalactic.com/info/Horner%27s_method)) for rewriting the polynomial:
+Consider the problem of evaluating a polynomial at a point. Given _n_ coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x^i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called [Horner's rule](https://infogalactic.com/info/Horner%27s_method)) for rewriting the polynomial:
 $`\displaystyle\sum_{i=0}^{n-1} a_i x^i `$ = (...(a<sub>n-1</sub>x + a<sub>n-2</sub>)x + ... + a<sub>1</sub>)x + a<sub>0</sub>.
+
+I believe the Θ(n<sup>2</sup>)-time solution is arrived at by considering the multiplications of x<sup>n</sup> as _n_ steps. So for the each value of _n_ we'll have _n_+1 multiplications (coefficent + number of _x_ multiplications), and we must multiply that again by _n_ for each a<sub><n/sub> coefficient to be processed.
+
+Using Horner's method, we eliminate the multiplications of _x_ for each value of _i_ and instead multiply by _x_ at each new nested coefficient expression.
 
 ### 1.2-5
 Express the function n<sup>3</sup>/1000 - 100n<sup>2</sup> - 100n + 3 in terms of Θ-notation.
 
+This appears to be Θ(1) as greater values of _n_ do not cause greater numbers of operations to be performed.
+
 ### 1.2-6
 How can we modify almost any algorithm to have a good best-case running time?
+
+Detecting if the results are already in the desired end state can often be accomplished with a number of steps fewer or equal to the algorithm itself, allowing the execution to be skipped in best-case scenarios.
