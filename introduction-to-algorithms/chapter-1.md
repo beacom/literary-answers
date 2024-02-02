@@ -21,8 +21,11 @@ INSERTION-SORT(A)
 ```
 ### 1.1-3
 Consider the **searching problem**:
+
  **Input:** A sequence of n numbers A = (a<sub>1</sub>, a<sub>2</sub>,....a<sub>n</sub>) and a value _v_.
+ 
  **Output:** An index i such that _v_ = A[i] or tthe special value `NIL` if _v_ does not appear in A.
+ 
  Write pseudocode for **linear search**, which scans through the sequence, looking for _v_.
 
  This is a matter of iterating over the sequence and performing an equals comprison operation and returning NIL if no value was found.
@@ -83,8 +86,12 @@ SELECTION-SORT(A)
 ### 1.2-2
 Consider linear search again (see exercise 1.1-3). How many elements of the input sequence need to be checked on the average, assumming that the element being searched for is equally likely to be any element in the array? How about in the worst case? What are the average-case and worst-case running times of linear search in Θ-notation? Justify your answers.
 
+Half of the elements will need to be compared on average with an equal distribution of searched for elements in the array. In the worst case, meaning the searched for element is the last one in the array, all elements will need to be compared. The average case sccenarion is Θ(n/2) and the worst case scenario is Θ(n).
+
 ### 1.2-3
 Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) of _n_ numbers contains repeated occurrences of some number. Show that this can be done in Θ(_n_ lg _n_) time, wher lg _n_ stands for log<sub>2</sub> _n_.
+
+A repeated occurance is finding the same value more than once. So starting with the first element, search through the rest of the sequence looking for that value. Repeat on the second element, but it is not necessary to compare to the previous element because those two elements have already been compared. So as we continue through the sequence there are fewer elements to compare to each time. The value log<sub>2</sub> _n_ represents the decreasing number of comparisons necessary in addition to each element of the sequence, hence Θ(_n_ lg _n_). 
 
 ### 1.2-4
 Consider the problem of evaluating a polynomial at a point. Given n coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x_i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called Horner's rule) for rewriting the polynomial:
