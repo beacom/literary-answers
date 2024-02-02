@@ -86,7 +86,7 @@ SELECTION-SORT(A)
 ### 1.2-2
 Consider linear search again (see exercise 1.1-3). How many elements of the input sequence need to be checked on the average, assumming that the element being searched for is equally likely to be any element in the array? How about in the worst case? What are the average-case and worst-case running times of linear search in Θ-notation? Justify your answers.
 
-Half of the elements will need to be compared on average with an equal distribution of searched for elements in the array. In the worst case, meaning the searched for element is the last one in the array, all elements will need to be compared. The average case sccenarion is Θ(n/2) and the worst case scenario is Θ(n).
+Half of the elements will need to be compared on average with an equal distribution of searched for elements in the array. In the worst case, meaning the searched for element is the last one in the array, all elements will need to be compared. The average case scenario is Θ(n/2) and the worst case scenario is Θ(n).
 
 ### 1.2-3
 Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) of _n_ numbers contains repeated occurrences of some number. Show that this can be done in Θ(_n_ lg _n_) time, wher lg _n_ stands for log<sub>2</sub> _n_.
