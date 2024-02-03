@@ -121,10 +121,10 @@ Write speudocode for `MERGE(A,p,q,r)`.
 ### 1.3-3
 Use mathematical induction to show that the solution of the recurrence
 
-$`math T(n) =
+$` T(n) =
   \begin{cases}
     2       & \quad \text{if } n \text{ = 2}\\
-    2T(n/2) + n  & \quad \text{if } n \text{ = 2^k}
+    2T(n/2) + n  & \quad \text{if } n \text{ = 2<sup>k</sup>}
   \end{cases}
 `$
 
