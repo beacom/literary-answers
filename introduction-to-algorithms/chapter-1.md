@@ -129,3 +129,15 @@ $` T(n) =
 `$
 
 is T(n) = n lg n.
+
+### 1.3-4 
+Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n} into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
+
+### 1.3-5
+Referring back to the searching problem (see Exercise 1.1-3), observe that if the sequence A is sorted, we can check the midpoint of the sequence against v and eliminate half of the sequence from further consideration. **Binary search** is an algorithm that repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is Θ(lg n).
+
+### 1.3-6
+Observe that the **while** loop of lines 5-7 of the `INSERTION-SORT` procedure in Section 1.1 uses a linear search to scan (backward) through the sorted subarray A[1..j-1]. Can we use a binary search (see Exercise 1.3-5) instead to improve the overall worst-case running time of insertion sort to Θ(n lg n)?
+
+### 1.3-7
+Describe a Θ(n lg n)-time algorithm that, given a set S of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in S whose sum is exactly _x_.
