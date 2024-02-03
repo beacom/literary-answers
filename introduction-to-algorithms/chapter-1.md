@@ -124,7 +124,7 @@ Use mathematical induction to show that the solution of the recurrence
 $` T(n) =
   \begin{cases}
     2       & \quad \text{if } n \text{ = 2}\\
-    2T(n/2) + n  & \quad \text{if } n \text{ = }2^k
+    2T(n/2) + n  & \quad \text{if } n \text{ = }2^k, k > 1
   \end{cases}
 `$
 
