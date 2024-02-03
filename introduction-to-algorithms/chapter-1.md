@@ -114,3 +114,16 @@ Detecting if the results are already in the desired end state can often be accom
 ### 1.3-1
 Using Figure 1.3 as a model, illustrate the operation of merge sort on the array A = (3, 41, 52, 26, 38, 57, 9, 49).
 ![Insertion sort solution diagram for 31, 41, 59, 26, 41, 58](intro-to-algorithms-1.3-1.svg)
+
+### 1.3-2
+Write speudocode for `MERGE(A,p,q,r)`.
+
+### 1.3-3
+Use mathematical induction to show that the solution of the recurrence
+\[ T(n) =
+  \begin{cases}
+    2       & \quad \text{if } n \text{ = 2}\\
+    2T(n/2) + n  & \quad \text{if } n \text{ = 2<sup>k</sup>, k > 1}
+  \end{cases}
+\]
+is T(n) = n lg n.
