@@ -110,3 +110,7 @@ This appears to be Θ(1) as greater values of _n_ do not cause greater numbers o
 How can we modify almost any algorithm to have a good best-case running time?
 
 Detecting if the results are already in the desired end state can often be accomplished with a number of steps fewer or equal to the algorithm itself, allowing the execution to be skipped in best-case scenarios.
+
+### 1.3-1
+Using Figure 1.3 as a model, illustrate the operation of merge sort on the array A = (3, 41, 52, 26, 38, 57, 9, 49).
+![Insertion sort solution diagram for 31, 41, 59, 26, 41, 58](intro-to-algorithms-1.3-1.svg)
