@@ -120,10 +120,12 @@ Write speudocode for `MERGE(A,p,q,r)`.
 
 ### 1.3-3
 Use mathematical induction to show that the solution of the recurrence
-$`\[ f(n) =
+
+$` f(n) =
   \begin{cases}
     n/2       & \quad \text{if } n \text{ is even}\\
     -(n+1)/2  & \quad \text{if } n \text{ is odd}
   \end{cases}
-\]`$
+`$
+
 is T(n) = n lg n.
