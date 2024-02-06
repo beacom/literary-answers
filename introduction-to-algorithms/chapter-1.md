@@ -185,4 +185,6 @@ Observe that the **while** loop of lines 5-7 of the `INSERTION-SORT` procedure i
 No, because that part of the algorithm is also shifting the elements in the array in order to insert the current key value into the correct location. So every element must be processed.
 
 ### 1.3-7
-Describe a Θ(n lg n)-time algorithm that, given a set S of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in S whose sum is exactly _x_.
+Describe a Θ(n lg n)-time algorithm that, given a set _S_ of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in _S_ whose sum is exactly _x_.
+
+As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_. Then set two indeicies _i_ and _j_ respectively with the first and last alement of the sorted sequence. While i < j test to see if _S_[i] + _S_[j] is the desired sum. If not, increment i if the sum is too low or decrement j if the sum is too high. In the worst case scenarion, no two elements sum to the tested value, this will execute in Θ(n), which gives us a runtime of Θ(n log<sub>2</sub> n + n), which simplifies to Θ(log<sub>2</sub> n).
