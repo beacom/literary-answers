@@ -158,12 +158,26 @@ Insertion sort can be expressed as a recursive procedure as follows. In order to
 $` T(n) =
   \begin{cases}
     n       & \quad \text{if } n \text{ = 1}\\
-    T(n^2)  & \quad \text{if } n \text{ > 1} 
+    T(n^2) + 1  & \quad \text{if } n \text{ > 1} 
   \end{cases}
 `$
 
 ### 1.3-5
 Referring back to the searching problem (see Exercise 1.1-3), observe that if the sequence A is sorted, we can check the midpoint of the sequence against v and eliminate half of the sequence from further consideration. **Binary search** is an algorithm that repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is Θ(lg n).
+
+```
+BINARY-SEARCH(A, value)
+ midpoint <- length[A] / 2
+ for i <- 0; i < log<sub>2</sub> length[A] + 1, i <- i + 1
+  if A[midpoint] = value
+   return midpoint
+  else if A[midpoint] < value
+   midpoint <- midpoint / 2
+  else if A[midpoint] > value
+   midpoint <- midpoint + (midpoint / 2)
+ return NIL
+```
+The worst case running time is Θ(log<sub>2</sub> n) because each iteration eliminate half the elements from the remain search space. In the case of eight elements, log<sub>2</sub> 8 = 3, in which three corresponds to the number of iterations needed to find the element or conclude that it doesn't exist.
 
 ### 1.3-6
 Observe that the **while** loop of lines 5-7 of the `INSERTION-SORT` procedure in Section 1.1 uses a linear search to scan (backward) through the sorted subarray A[1..j-1]. Can we use a binary search (see Exercise 1.3-5) instead to improve the overall worst-case running time of insertion sort to Θ(n lg n)?
