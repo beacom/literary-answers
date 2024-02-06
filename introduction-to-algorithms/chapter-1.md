@@ -142,7 +142,7 @@ $` T(n) =
 
 is T(n) = n lg n.
 
-We have a strong hint of log<sub>2</sub>n performance due to the (n/2) term.
+We have a strong hint of log<sub>2</sub>n performance due to the T(n/2) term.
 
 $`T(n) = 2T(n/2) + n = 2T(2^k/2) + 2^k`$\n
 
@@ -150,10 +150,10 @@ $`T(n - 1) = 2T(n-1/2) + n-1`$\n
 
 $`T(n - 2) = 2T(n-2/2) + n-2`$\n
 
-T(n) = 2 log<sub>2</sub>n + n = $`2T(2^k/2) + 2^k`$ = n log<sub>2</sub>n
+T(n) = 2 log<sub>2</sub>n + n = n log<sub>2</sub>n
 
 ### 1.3-4 
-Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n} into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
+Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n] into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
 
 ### 1.3-5
 Referring back to the searching problem (see Exercise 1.1-3), observe that if the sequence A is sorted, we can check the midpoint of the sequence against v and eliminate half of the sequence from further consideration. **Binary search** is an algorithm that repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is Θ(lg n).
