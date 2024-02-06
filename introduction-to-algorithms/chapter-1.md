@@ -144,11 +144,11 @@ is T(n) = n lg n.
 
 We have a strong hint of log<sub>2</sub>n performance due to the T(n/2) term.
 
-$`T(n) = 2T(n/2) + n = 2T(2^k/2) + 2^k`$\n
+$`T(n) = 2T(n/2) + n = 2T(2^k/2) + 2^k`$
 
-$`T(n - 1) = 2T(n-1/2) + n-1`$\n
+$`T(n - 1) = 2T(n-1/2) + n-1`$
 
-$`T(n - 2) = 2T(n-2/2) + n-2`$\n
+$`T(n - 2) = 2T(n-2/2) + n-2`$
 
 T(n) = 2 log<sub>2</sub>n + n = n log<sub>2</sub>n
 
