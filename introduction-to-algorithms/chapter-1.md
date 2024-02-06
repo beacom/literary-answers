@@ -182,5 +182,7 @@ The worst case running time is Θ(log<sub>2</sub> n) because each iteration elim
 ### 1.3-6
 Observe that the **while** loop of lines 5-7 of the `INSERTION-SORT` procedure in Section 1.1 uses a linear search to scan (backward) through the sorted subarray A[1..j-1]. Can we use a binary search (see Exercise 1.3-5) instead to improve the overall worst-case running time of insertion sort to Θ(n lg n)?
 
+No, because that part of the algorithm is also shifting the elements in the array in order to insert the current key value into the correct location. So every element must be processed.
+
 ### 1.3-7
 Describe a Θ(n lg n)-time algorithm that, given a set S of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in S whose sum is exactly _x_.
