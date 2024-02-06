@@ -142,6 +142,12 @@ $` T(n) =
 
 is T(n) = n lg n.
 
+We have a strong hint of log<sub>2<sub> performance due to the (n/2) term.
+
+$`T(n) = 2T(n/2) + n = 2T(2^k/2) + 2^k`$
+$`T(n + 1) = 2T(n+1/2) + n+1`$
+$`T(n + 2) = 2T(n+2/2) + n+2`$
+
 ### 1.3-4 
 Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n} into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
 
