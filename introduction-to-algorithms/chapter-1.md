@@ -155,6 +155,13 @@ T(n) = 2 log<sub>2</sub>n + n = n log<sub>2</sub>n
 ### 1.3-4 
 Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n] into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
 
+$` T(n) =
+  \begin{cases}
+    n       & \quad \text{if } n \text{ = 1}\\
+    T(n^2)  & \quad \text{if } n \text{ > 1} 
+  \end{cases}
+`$
+
 ### 1.3-5
 Referring back to the searching problem (see Exercise 1.1-3), observe that if the sequence A is sorted, we can check the midpoint of the sequence against v and eliminate half of the sequence from further consideration. **Binary search** is an algorithm that repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is Θ(lg n).
 
