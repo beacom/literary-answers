@@ -118,6 +118,18 @@ Using Figure 1.3 as a model, illustrate the operation of merge sort on the array
 ### 1.3-2
 Write speudocode for `MERGE(A,p,q,r)`.
 
+```
+MERGE(A,p,q,r)
+ i1 <- p
+ i2 <- q
+ while i1 < q or i2 < r
+  if A[i2] < A[i1]
+   SWAP(A[i2], A[i1[)
+   i2 <- i2 + 1
+  else
+   i1 <- i1 + 1
+```
+
 ### 1.3-3
 Use mathematical induction to show that the solution of the recurrence
 
