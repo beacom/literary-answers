@@ -191,7 +191,7 @@ Describe a Θ(n lg n)-time algorithm that, given a set _S_ of _n_ real numbers a
 As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_. Then set two indeicies _i_ and _j_ respectively with the first and last alement of the sorted sequence. While i < j test to see if _S_[i] + _S_[j] is the desired sum. If not, increment i if the sum is too low or decrement j if the sum is too high. In the worst case scenarion, no two elements sum to the tested value, this will execute in Θ(n), which gives us a runtime of Θ(n log<sub>2</sub> n + n), which simplifies to Θ(log<sub>2</sub> n).
 ## 1.4 Summary
 ### 1.4-1
-Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size n, insertion sort runs in 8_n_<sup>2</sup> steps, while merge sort runs in 64_n_ log<sub>2</sub> _n_ steps. For which values of _n_ does insertion sort beat merge sort? How might one rewrite the merge sort pseudocode to make it even faster on small inputs?
+Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size n, insertion sort runs in 8n<sup>2</sup> steps, while merge sort runs in 64n log<sub>2</sub> _n_ steps. For which values of _n_ does insertion sort beat merge sort? How might one rewrite the merge sort pseudocode to make it even faster on small inputs?
 
 ### 1.4-2
 What is the smallest value of _n_ such that an algorithm whose running time in 100_n_<sup2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
