@@ -64,6 +64,7 @@ ADD-BINARY-DIGITS(v1, v2)
  else
   return 1
 ```
+## 1.2 Analyzing algorithms
 ### 1.2-1
 Consider sorting _n_ numbers stored in array A by first finding the smallest element of A and putting it in the first entry of another array B. Then find the second smallest element of A and put it in the second entry of B. Continue in this manner for the _n_ elements of A. Write pseduocode for the algorithm, which is known as selection sort. Give the best-case and worst-case running times of selection sort in Θ-notation.
 
@@ -110,7 +111,7 @@ This appears to be Θ(1) as greater values of _n_ do not cause greater numbers o
 How can we modify almost any algorithm to have a good best-case running time?
 
 Detecting if the results are already in the desired end state can often be accomplished with a number of steps fewer or equal to the algorithm itself, allowing the execution to be skipped in best-case scenarios.
-
+## 1.3 Designing algorithms
 ### 1.3-1
 Using Figure 1.3 as a model, illustrate the operation of merge sort on the array A = (3, 41, 52, 26, 38, 57, 9, 49).
 ![Merge sort solution diagram for 3, 41, 52, 26, 38, 57, 9, 49](intro-to-algorithms-1.3-1.svg)
@@ -188,3 +189,36 @@ No, because that part of the algorithm is also shifting the elements in the arra
 Describe a Θ(n lg n)-time algorithm that, given a set _S_ of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in _S_ whose sum is exactly _x_.
 
 As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_. Then set two indeicies _i_ and _j_ respectively with the first and last alement of the sorted sequence. While i < j test to see if _S_[i] + _S_[j] is the desired sum. If not, increment i if the sum is too low or decrement j if the sum is too high. In the worst case scenarion, no two elements sum to the tested value, this will execute in Θ(n), which gives us a runtime of Θ(n log<sub>2</sub> n + n), which simplifies to Θ(log<sub>2</sub> n).
+## 1.4 Summary
+### 1.4-1
+Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size n, insertion sort runs in 8_n_<sup>2</sup> steps, while merge sort runs in 64_n_ log<sub>2</sub> _n_ steps. For which values of _n_ does insertion sort beat merge sort? How might one rewrite the merge sort pseudocode to make it even faster on small inputs?
+
+### 1.4-2
+What is the smallest value of _n_ such that an algorithm whose running time in 100_n_<sup2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
+
+## Problems
+### 1-1 Comparisons of running times
+For reach function f(n) and time t in the following table, determine the largest sinze _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem take f(n) microseconds.
+
+### 1-2 Insert sort on small arrays in merge sort
+Although merge sort run in Θ(n lob<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to user insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
+
+**a.** Show that the _n_/_k_ sublists, each of length _k_, can be sorted by insertion sort in Θ(_nk_) worst-case time.
+
+**b.** Show that the sublists can be merged in Θ(_n_ log<sub>2</sub> (_n_/_k_)) wost-case time.
+
+**c.** Given that the modified algorithm runs in Θ(_nk_ + _n_ log<sub>2</sub> (_n_/_k_) worst-case time, what is the largest asymptotic (Θ-notiation) value of _k_ as a function of _n_ for which the modified algorithm has the same asymptotic running time as standard merge sort?
+
+**d.** How should _k_ be chosen in practice?
+
+### 1-3 Inversions
+Let A[1..n]] be and array of _n_ distinct number. If i < j and A[i] > A[j], then the pair (i, j) is called an **_inversion_** of A.
+
+**a.** List the five inverstions of the array (2, 3, 8, 6, 1).
+
+**b.** What array with elements from the set {1, 2, ..., n} has the most inversions? How many does it have?
+
+**c.** What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.
+
+**d.** Give an algorithm that determines the number of inversions in any permutation of _n_ elements in Θ(_n_ log<sub>2</sub> _n_) worst-case time. (_Hint:_ Modify merge sort.)
+
