@@ -201,6 +201,7 @@ What is the smallest value of _n_ such that an algorithm whose running time in 1
 For reach function f(n) and time t in the following table, determine the largest sinze _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem take f(n) microseconds.
 
 ||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |log<sub>2</sub>||||||||
 |$`\sqrt n`$||||||||
 
