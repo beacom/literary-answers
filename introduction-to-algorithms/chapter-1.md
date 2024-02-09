@@ -202,8 +202,13 @@ For reach function f(n) and time t in the following table, determine the largest
 
 ||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|log<sub>2</sub>||||||||
-|$`\sqrt n`$||||||||
+|log<sub>2</sub> n||||||||
+|n||||||||
+|n log<sub>2</sub> n||||||||
+|n<sup>2</sup>||||||||
+|n<sup>3</sup>||||||||
+|2<sup>n</sup>||||||||
+|n!||||||||
 
 ### 1-2 Insert sort on small arrays in merge sort
 Although merge sort run in Θ(n lob<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to user insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
