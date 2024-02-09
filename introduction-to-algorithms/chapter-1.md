@@ -200,6 +200,10 @@ What is the smallest value of _n_ such that an algorithm whose running time in 1
 ### 1-1 Comparisons of running times
 For reach function f(n) and time t in the following table, determine the largest sinze _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem take f(n) microseconds.
 
+||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
+|log<sub>2</sub>||||||||
+|$`\sqrt n`$||||||||
+
 ### 1-2 Insert sort on small arrays in merge sort
 Although merge sort run in Θ(n lob<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to user insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
 
