@@ -196,7 +196,7 @@ Suppose we are comparing implementations of insertion sort and merge sort on the
 Start by solving for 8n<sup>2</sup> = 64n log<sub>2</sub> _n_ to learn where the performance of the two algorithms intersect.
 
 ### 1.4-2
-What is the smallest value of _n_ such that an algorithm whose running time in 100n<sup2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
+What is the smallest value of _n_ such that an algorithm whose running time in 100n<sup>2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
 
 ## Problems
 ### 1-1 Comparisons of running times
