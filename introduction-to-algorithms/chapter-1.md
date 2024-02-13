@@ -193,12 +193,15 @@ As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_.
 ### 1.4-1
 Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size n, insertion sort runs in 8n<sup>2</sup> steps, while merge sort runs in 64n log<sub>2</sub> _n_ steps. For which values of _n_ does insertion sort beat merge sort? How might one rewrite the merge sort pseudocode to make it even faster on small inputs?
 
-Start by solving for 8n<sup>2</sup> = 64n log<sub>2</sub> _n_ to learn where the performance of the two algorithms intersect. Graphing the solution, we see that insertion sort outperforms merge sort for values of _n_ between 1.1 and 43.559.
+Start by solving for 8n<sup>2</sup> = 64n log<sub>2</sub> _n_ to learn where the performance of the two algorithms intersect. Graphing the solution, we see that insertion sort outperforms merge sort for values of _n_ between 1.1 and 43.559. Which means insertions sort is outperforming merge sort for values of _n_ between 2 and 43.
 ![graph of execution times](intro-to-algorithms-1.4-1.graph.png)
+The `MERGE-SORT` pseudocode could be changed to call `INSERTION-SORT` when _n_ < 44.
 
 
 ### 1.4-2
 What is the smallest value of _n_ such that an algorithm whose running time in 100n<sup>2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
+
+100n<sup>2</sup> is less than 2<sup>n</sup> until 14.325, making 15 the smallest value of _n_ such that 100n<sup>2</sup> outperforms 2<sup>n</sup>.
 
 ## Problems
 ### 1-1 Comparisons of running times
