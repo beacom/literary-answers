@@ -210,7 +210,7 @@ For reach function f(n) and time t in the following table, determine the largest
 This is solved by determining the value of _n_ for the functions in the first column that equals to the number of microseconds in the time period specified in the first row.
 
 ||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| :------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |log<sub>2</sub> n|2<sup>1,000,000</sup>|2<sup>60,000,000</sup>|2<sup>3,600,000,000</sup>|2<sup>86,400,000,000</sup>|2<sup>2,592,000,000,000</sup>|2<sup>31,104,000,000,000</sup>|2<sup>3,110,400,000,000,000</sup>|
 |n|1,000,000|60,000,000|3,600,000,000|86,400,000,000|2,592,000,000,000|31,104,000,000,000|3,110,400,000,000,000|
 |n log<sub>2</sub> n||||||||
