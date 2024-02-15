@@ -212,7 +212,7 @@ This is solved by determining the value of _n_ for the functions in the first co
 ||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |log<sub>2</sub> n|2<sup>1,000,000</sup>|2<sup>60,000,000</sup>|2<sup>3,600,000,000</sup>|2<sup>86,400,000,000</sup>|2<sup>2,592,000,000,000</sup>|2<sup>31,104,000,000,000</sup>|2<sup>3,110,400,000,000,000</sup>|
-|n||||||||
+|n|1,000,000|60,000,000|3,600,000,000|86,400,000,000|2,592,000,000,000|31,104,000,000,000|3,110,400,000,000,000|
 |n log<sub>2</sub> n||||||||
 |n<sup>2</sup>||||||||
 |n<sup>3</sup>||||||||
