@@ -217,7 +217,8 @@ This is solved by determining the value of _n_ for the functions in the first co
 |n<sup>2</sup>|1,000|2000 $`\sqrt{15}`$ |60,000|120,000 $`\sqrt{6}`$|720,000 $`\sqrt{5}`$|1,440,000 $`\sqrt{15}`$|14,400,000 $`\sqrt{15}`$|
 |n<sup>3</sup>|100|$` 100 \times 2^{2/3} \sqrt[3]{15} `$|$`200 \sqrt[3]{2} 15^{2/3} `$|$` 1200 \sqrt[3]{2} 5^{2/3} `$|$` 6000 \times 2^{2/3} \sqrt[3]{3} `$|$` 12,000 \sqrt[3]{2} 3^{2/3} `$|$` 24,000 \times 15^{2/3} `$|
 |2<sup>n</sup>|19|25|31|36|41|44|51|
-|n!||||||||
+|n!|9|11|12|13|*|*|*|
+*The free tier of Mathematica refused the compute resources to calculate the answer.
 
 ### 1-2 Insert sort on small arrays in merge sort
 Although merge sort run in Θ(n lob<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to user insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
