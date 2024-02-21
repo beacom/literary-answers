@@ -218,6 +218,7 @@ This is solved by determining the value of _n_ for the functions in the first co
 |n<sup>3</sup>|100|$` 100 \times 2^{2/3} \sqrt[3]{15} `$|$`200 \sqrt[3]{2} 15^{2/3} `$|$` 1200 \sqrt[3]{2} 5^{2/3} `$|$` 6000 \times 2^{2/3} \sqrt[3]{3} `$|$` 12,000 \sqrt[3]{2} 3^{2/3} `$|$` 24,000 \times 15^{2/3} `$|
 |2<sup>n</sup>|19|25|31|36|41|44|51|
 |n!|9|11|12|13|*|*|*|
+
 *The free tier of Mathematica refused the compute resources to calculate the answer.
 
 ### 1-2 Insert sort on small arrays in merge sort
