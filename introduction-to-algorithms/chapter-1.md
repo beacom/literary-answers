@@ -222,7 +222,7 @@ This is solved by determining the value of _n_ for the functions in the first co
 *The free tier of Mathematica refused the compute resources to calculate the answer.
 
 ### 1-2 Insert sort on small arrays in merge sort
-Although merge sort run in Θ(n lob<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to user insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
+Although merge sort run in Θ(n log<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to use insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in whcih _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
 
 **a.** Show that the _n_/_k_ sublists, each of length _k_, can be sorted by insertion sort in Θ(_nk_) worst-case time.
 
