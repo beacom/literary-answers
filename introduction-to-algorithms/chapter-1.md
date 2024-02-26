@@ -225,6 +225,7 @@ This is solved by determining the value of _n_ for the functions in the first co
 Although merge sort runs in Θ(n log<sub>2</sub> n) worst-case time and insertion sort runs in Θ(n<sup>2</sup>) worst-case time, the constant factors in insertion sort make it faster for small _n_. Thus, it makes sense to use insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in which _n_/_k_ sublists of length _k_ are sorted using insertions sort and then merged using the standard merging mechanism, where _k_ is a value to be determined.
 
 **a.** Show that the _n_/_k_ sublists, each of length _k_, can be sorted by insertion sort in Θ(_nk_) worst-case time.
+
 Insertion sort would take Θ(n^2) to sort all _n_ elements, but it is not sorting every element, but rather _n_/_k_ sets of elements. So there will be _n_/_k_ executions of Θ(k^2). 
 
 _n_/_k_ Θ(k^2) = Θ(nk)
