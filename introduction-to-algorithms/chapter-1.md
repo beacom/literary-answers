@@ -188,7 +188,7 @@ No, because that part of the algorithm is also shifting the elements in the arra
 ### 1.3-7
 Describe a Θ(n lg n)-time algorithm that, given a set _S_ of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in _S_ whose sum is exactly _x_.
 
-As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_. Then set two indeicies _i_ and _j_ respectively with the first and last alement of the sorted sequence. While i < j test to see if _S_[i] + _S_[j] is the desired sum. If not, increment i if the sum is too low or decrement j if the sum is too high. In the worst case scenarion, no two elements sum to the tested value, this will execute in Θ(n), which gives us a runtime of Θ(n log<sub>2</sub> n + n), which simplifies to Θ(log<sub>2</sub> n).
+As a first Θ(n log<sub>2</sub> n) step, perform merge sort to sort the set _S_. Then set two indices _i_ and _j_ respectively with the first and last element of the sorted sequence. While i < j test to see if _S_[i] + _S_[j] is the desired sum. If not, increment i if the sum is too low or decrement j if the sum is too high. In the worst case scenarion, no two elements sum to the tested value, this will execute in Θ(n), which gives us a runtime of Θ(n log<sub>2</sub> n + n), which simplifies to Θ(log<sub>2</sub> n).
 ## 1.4 Summary
 ### 1.4-1
 Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size n, insertion sort runs in 8n<sup>2</sup> steps, while merge sort runs in 64n log<sub>2</sub> _n_ steps. For which values of _n_ does insertion sort beat merge sort? How might one rewrite the merge sort pseudocode to make it even faster on small inputs?
@@ -231,6 +231,10 @@ Insertion sort would take Θ(n^2) to sort all _n_ elements, but it is not sortin
 _n_/_k_ Θ(k^2) = Θ(nk)
 
 **b.** Show that the sublists can be merged in Θ(_n_ log<sub>2</sub> (_n_/_k_)) wost-case time.
+
+The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we _n_/_k_ sublists to merge. n = (n/k)k
+
+TODO: Where does the log<sub>2</sub> (_n_/_k_) come from?
 
 **c.** Given that the modified algorithm runs in Θ(_nk_ + _n_ log<sub>2</sub> (_n_/_k_) worst-case time, what is the largest asymptotic (Θ-notiation) value of _k_ as a function of _n_ for which the modified algorithm has the same asymptotic running time as standard merge sort?
 
