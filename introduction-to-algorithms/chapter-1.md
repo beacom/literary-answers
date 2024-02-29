@@ -232,9 +232,9 @@ _n_/_k_ Θ(k^2) = Θ(nk)
 
 **b.** Show that the sublists can be merged in Θ(_n_ log<sub>2</sub> (_n_/_k_)) wost-case time.
 
-The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we _n_/_k_ sublists to merge. n = (n/k)k
+The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we _n_/_k_ sublists to merge.
 
-TODO: Where does the log<sub>2</sub> (_n_/_k_) come from?
+Because the work space is divided into (n/k) steps we get the log<sub>2</sub> (_n_/_k_) factor combined with the _n_ merge operations.
 
 **c.** Given that the modified algorithm runs in Θ(_nk_ + _n_ log<sub>2</sub> (_n_/_k_) worst-case time, what is the largest asymptotic (Θ-notiation) value of _k_ as a function of _n_ for which the modified algorithm has the same asymptotic running time as standard merge sort?
 
