@@ -236,7 +236,7 @@ The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we _n
 
 Because the work space is divided into (n/k) steps we get the log<sub>2</sub> (_n_/_k_) factor combined with the _n_ merge operations.
 
-**c.** Given that the modified algorithm runs in Θ(_nk_ + _n_ log<sub>2</sub> (_n_/_k_) worst-case time, what is the largest asymptotic (Θ-notiation) value of _k_ as a function of _n_ for which the modified algorithm has the same asymptotic running time as standard merge sort?
+**c.** Given that the modified algorithm runs in $`Θ(nk + n \space \log_2{ \frac{n}{k} } )`$ worst-case time, what is the largest asymptotic (Θ-notiation) value of _k_ as a function of _n_ for which the modified algorithm has the same asymptotic running time as standard merge sort?
 
 This is a matter of solving the following equation: $`Θ(nk + n \space \log_2{ \frac{n}{k} } ) = Θ(n^{2})`$
 
