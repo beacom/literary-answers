@@ -232,7 +232,7 @@ _n_/_k_ Θ(k^2) = Θ(nk)
 
 **b.** Show that the sublists can be merged in Θ(_n_ log<sub>2</sub> (_n_/_k_)) wost-case time.
 
-The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we _n_/_k_ sublists to merge.
+The `Merge(n)` procedure takes Θ(n) time to merge _n_ elements. As above, we have $`\frac{n}{k}`$ sublists to merge.
 
 Because the work space is divided into (n/k) steps we get the log<sub>2</sub> (_n_/_k_) factor combined with the _n_ merge operations.
 
