@@ -90,7 +90,7 @@ Consider linear search again (see exercise 1.1-3). How many elements of the inpu
 Half of the elements will need to be compared on average with an equal distribution of searched for elements in the array. In the worst case, meaning the searched for element is the last one in the array, all elements will need to be compared. The average case scenario is Θ(n/2) and the worst case scenario is Θ(n).
 
 ### 1.2-3
-Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) of _n_ numbers contains repeated occurrences of some number. Show that this can be done in Θ(_n_ lg _n_) time, wher lg _n_ stands for log<sub>2</sub> _n_.
+Consider the problem of determining whether an arbitrary sequence (x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) of _n_ numbers contains repeated occurrences of some number. Show that this can be done in Θ(_n_ lg _n_) time, where lg _n_ stands for log<sub>2</sub> _n_.
 
 A repeated occurance is finding the same value more than once. So starting with the first element, search through the rest of the sequence looking for that value. Repeat on the second element, but it is not necessary to compare to the previous element because those two elements have already been compared. So as we continue through the sequence there are fewer elements to compare to each time. The value log<sub>2</sub> _n_ represents the decreasing number of comparisons necessary in addition to each element of the sequence, hence Θ(_n_ lg _n_). 
 
