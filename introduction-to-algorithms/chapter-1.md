@@ -9,7 +9,7 @@ Rewrite the `INSERTION-SORT` procedure to sort into nonincreasing instead of non
 This is a matter of changing the comparison logic from greater than to less than.
 
 ```
-INSERTION-SORT(A)
+INSERTION-SORT-NONINCREASING(A)
  for j <- 2 to length[A]
   do key <- A[j]
     > Insert A[j] into the sorted sequence A[1..j-1].
@@ -22,13 +22,13 @@ INSERTION-SORT(A)
 ### 1.1-3
 Consider the **searching problem**:
 
- **Input:** A sequence of n numbers A = (a<sub>1</sub>, a<sub>2</sub>,....a<sub>n</sub>) and a value _v_.
+ **Input:** A sequence of _n_ numbers A = (a<sub>1</sub>, a<sub>2</sub>,....a<sub>n</sub>) and a value _v_.
  
  **Output:** An index i such that _v_ = A[i] or tthe special value `NIL` if _v_ does not appear in A.
  
  Write pseudocode for **linear search**, which scans through the sequence, looking for _v_.
 
- This is a matter of iterating over the sequence and performing an equals comprison operation and returning NIL if no value was found.
+ This is a matter of iterating over the sequence and performing an equals comparison operation and returning NIL if no value was found.
 
  ```
  LINEAR-SEARCH(A, v)
@@ -98,7 +98,7 @@ A repeated occurance is finding the same value more than once. So starting with 
 Consider the problem of evaluating a polynomial at a point. Given _n_ coefficients a<sub>0</sub>, a<sub>1</sub>,...,a<sub>n-1</sub> and a real number _x_, we wish to compute $`\displaystyle\sum_{i=0}^{n-1} a_i x^i `$. Describe a straightforwaard Θ(n<sup>2</sup>)-time algorithm for this problem. Describe a Θ(n)-time algorithm that uses the following method (called [Horner's rule](https://infogalactic.com/info/Horner%27s_method)) for rewriting the polynomial:
 $`\displaystyle\sum_{i=0}^{n-1} a_i x^i `$ = (...(a<sub>n-1</sub>x + a<sub>n-2</sub>)x + ... + a<sub>1</sub>)x + a<sub>0</sub>.
 
-I believe the Θ(n<sup>2</sup>)-time solution is arrived at by considering the multiplications of x<sup>n</sup> as _n_ steps. So for the each value of _n_ we'll have _n_+1 multiplications (coefficent + number of _x_ multiplications), and we must multiply that again by _n_ for each a<sub><n/sub> coefficient to be processed.
+The Θ(n<sup>2</sup>)-time solution is arrived at by considering the multiplications of x<sup>n</sup> as _n_ steps. So for the each value of _n_ we'll have _n_+1 multiplications (coefficent + number of _x_ multiplications), and we must multiply that again by _n_ for each a<sub>n</sub> coefficient to be processed.
 
 Using Horner's method, we eliminate the multiplications of _x_ for each value of _i_ and instead multiply by _x_ at each new nested coefficient expression.
 
@@ -143,7 +143,7 @@ $` T(n) =
 
 is T(n) = n lg n.
 
-We have a strong hint of log<sub>2</sub>n performance due to the T(n/2) term.
+Any algorithm that eliminates half of its problem space, as seen in the T(n/2) term, is logarithmic in base 2. So log<sub>2</sub>n performance is possible as the number of elements increases.
 
 $`T(n) = 2T(n/2) + n = 2T(2^k/2) + 2^k`$
 
@@ -151,7 +151,7 @@ $`T(n - 1) = 2T(n-1/2) + n-1`$
 
 $`T(n - 2) = 2T(n-2/2) + n-2`$
 
-T(n) = 2 log<sub>2</sub>n + n = n log<sub>2</sub>n
+$`T(n) = 2 log<sub>2</sub>n + n = n log<sub>2</sub>n`$
 
 ### 1.3-4 
 Insertion sort can be expressed as a recursive procedure as follows. In order to sort A[1..n], we recurseively sort A[1..n-1] and then insert A[n] into the sorted array A[1..n-1]. Write a recurrence for the running time of this recursive version of insertion sort.
