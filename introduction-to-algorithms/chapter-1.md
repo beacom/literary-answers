@@ -105,7 +105,7 @@ Using Horner's method, we eliminate the multiplications of _x_ for each value of
 ### 1.2-5
 Express the function n<sup>3</sup>/1000 - 100n<sup>2</sup> - 100n + 3 in terms of Θ-notation.
 
-This appears to be Θ(1) as greater values of _n_ do not cause greater numbers of operations to be performed.
+If what is meant is evaluating the statement, then it is Θ(1) as greater values of _n_ do not cause greater numbers of operations to be performed. If _n_ is meant to represent the number of steps, then it is Θ(n<sup>3</sup>).
 
 ### 1.2-6
 How can we modify almost any algorithm to have a good best-case running time?
