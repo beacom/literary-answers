@@ -205,7 +205,7 @@ What is the smallest value of _n_ such that an algorithm whose running time in 1
 
 ## Problems
 ### 1-1 Comparisons of running times
-For reach function f(n) and time t in the following table, determine the largest size _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem take f(n) microseconds.
+For reach function f(n) and time t in the following table, determine the largest size _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem takes f(n) microseconds.
 
 This is solved by determining the value of _n_ for the functions in the first column that equals to the number of microseconds in the time period specified in the first row.
 
