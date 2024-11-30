@@ -178,12 +178,12 @@ BINARY-SEARCH(A, value)
    midpoint <- midpoint + (midpoint / 2)
  return NIL
 ```
-The worst case running time is Θ(log<sub>2</sub> n) because each iteration eliminate half the elements from the remain search space. In the case of eight elements, log<sub>2</sub> 8 = 3, in which three corresponds to the number of iterations needed to find the element or conclude that it doesn't exist.
+The worst case running time is Θ(log<sub>2</sub> n) because each iteration eliminates half the elements from the remaining search space. In the case of eight elements, log<sub>2</sub> 8 = 3, in which three corresponds to the number of iterations needed to find the element or conclude that it doesn't exist.
 
 ### 1.3-6
 Observe that the **while** loop of lines 5-7 of the `INSERTION-SORT` procedure in Section 1.1 uses a linear search to scan (backward) through the sorted subarray A[1..j-1]. Can we use a binary search (see Exercise 1.3-5) instead to improve the overall worst-case running time of insertion sort to Θ(n lg n)?
 
-No, because that part of the algorithm is also shifting the elements in the array in order to insert the current key value into the correct location. So every element must be processed.
+No, because that part of the algorithm also shifts the array's elements to insert the current key value into the correct location. So every element must be processed.
 
 ### 1.3-7
 Describe a Θ(n lg n)-time algorithm that, given a set _S_ of _n_ real numbers and another real number _x_, determines whether or not there exist two elements in _S_ whose sum is exactly _x_.
@@ -199,15 +199,15 @@ The `MERGE-SORT` pseudocode could be changed to call `INSERTION-SORT` when _n_ <
 
 
 ### 1.4-2
-What is the smallest value of _n_ such that an algorithm whose running time in 100n<sup>2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
+What is the smallest value of _n_ such that an algorithm whose running time is 100n<sup>2</sup> runs faster than an algorithm whose running time is 2<sup>n</sup> on the same machine?
 
 100n<sup>2</sup> is less than 2<sup>n</sup> until 14.325, making 15 the smallest value of _n_ such that 100n<sup>2</sup> outperforms 2<sup>n</sup>.
 
 ## Problems
 ### 1-1 Comparisons of running times
-For reach function f(n) and time t in the following table, determine the largest size _n_ of a problem that can be solved in time _t_, assumming that the algorithm to solve the problem takes f(n) microseconds.
+For each function f(n) and time t in the following table, determine the largest size _n_ of a problem that can be solved in time _t_, assuming that the algorithm to solve the problem takes f(n) microseconds.
 
-This is solved by determining the value of _n_ for the functions in the first column that equals to the number of microseconds in the time period specified in the first row.
+This is solved by determining the value of _n_ for the functions in the first column that equals the number of microseconds in the time period specified in the first row.
 
 ||1 second|1 minute|1 hour|1 day|1 month|1 year|1 century|
 | :------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -243,9 +243,9 @@ This is a matter of solving the following equation: $`Θ(nk + n \space \log_2{ \
 **d.** How should _k_ be chosen in practice?
 
 ### 1-3 Inversions
-Let A[1..n]] be and array of _n_ distinct number. If i < j and A[i] > A[j], then the pair (i, j) is called an **_inversion_** of A.
+Let A[1..n]] be an array of _n_ distinct numbers. If i < j and A[i] > A[j], then the pair (i, j) is called an **_inversion_** of A.
 
-**a.** List the five inverstions of the array (2, 3, 8, 6, 1).
+**a.** List the five inversions of the array (2, 3, 8, 6, 1).
 
 **b.** What array with elements from the set {1, 2, ..., n} has the most inversions? How many does it have?
 
